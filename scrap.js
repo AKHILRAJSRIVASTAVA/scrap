@@ -33,5 +33,7 @@ const scrap = (error,response,html) => {
         
 }}   
 
-request('https://en.wikipedia.org/wiki/Taj_Mahal',scrap);
+const search = "Taj mahal";
+search.split(" ").join("_");
+request(`https://en.wikipedia.org/wiki/${search}`,scrap);
 console.log(wordMap);
